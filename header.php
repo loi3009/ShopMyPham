@@ -87,6 +87,53 @@
                                     <span class="i-bar"><i class="fa fa-bars"></i></span>
                                 </div>
 							</div>
+							<div id="category-menu-responsive" class="navbar collapse" aria-expanded="true" role="button">
+								<div class="nav-responsive">
+									<ul class="nav main-navigation collapse in">
+										<?php 
+										$args = array(
+											'hide_empty' => 0,
+											'taxonomy'	=> 'product_cat'
+										); 
+										$cates = get_categories( $args );
+										foreach ($$cates as $cate) {?>
+											<li>
+												<a href="<?php echo get_term_link( $cate->slug, 'product_cat') ?>"><?php echo $cate->name; ?></a>
+											</li>
+										<?php}
+										?>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-8 col-md-8 col-lg-9">
+							<div class="header-bottom-right offers">
+								<form action="<?php bloginfo( 'url' ) ?>/" method="GET" role="form">
+									<div class="row">
+										<div class="col-xs-12 col-sm-12 col-md-3">
+											<select name="product_cat" id="input" class="form-control" required="required">
+												<option value=""></option>
+												<?php $args =array(
+													'hide_empty' 	=> 0,
+													'taxonomy'		=> 'product_cat'
+
+											);
+												$cates = get_categories( $args );
+												foreach ($cates as $cate) {?>
+													<option value="<?php echo $cate->slug; ?>"><?php echo $cate->name; ?></option>
+												<?php}
+												?>
+											</select>
+										</div>
+										<div class="col-xs-12 col-sm-12 col-md-7">
+                                            <input type="text" name="s" class="form-control" placeholder="Tên sản phẩm..." >
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2">
+                                            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                                        </div>
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
