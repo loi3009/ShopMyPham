@@ -41,7 +41,54 @@
 								<img src="<?php bloginfo( 'template_directory' ) ?>/images/logo.png" style="width: 190px;">
 							</a>
 						</div>
+						<div class="header-right pull-right mtb_50">
+							<button class="navbar-toggle pull-left" type="button" data-toggle="collapse" data-target=".js-navbar-collapse"> 
+                                <span class="i-bar"><i class="fa fa-bars"></i></span>
+                            </button>
+                            <div class="shopping-icon">
+                            	<div class="cart-item" data-target="#cart-dropdown" data-toggle="collapse" aria-expanded="true" role="button">
+                            		Item's :
+                            		<span class="cart-qty">02</span>
+                            	</div>
+                            	<div id="cart-dropdown" class="cart-menu collapse"></div>
+                            </div>
+                            <div class="main-search pull-right">
+                            	<div class="search-overlay">
+                                    <a href="javascript:void(0)" class="search-overlay-close"></a>
+                                    <div class="container">
+                                        <form role="search" id="searchform" action="http://html.lionode.com/search" method="get">
+                                            <label class="h5 normal search-input-label">Enter keywords To Search Entire Store</label>
+                                            <input value="" name="q" placeholder="Search here..." type="search">
+                                            <button type="submit"></button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="header-search"> <a id="search-overlay-btn"></a> </div>
+                            </div>
+						</div>
+						<div class="collapse navbar-collapse js-navbar-collapse pull-right">
+                          <ul id="menu" class="nav navbar-nav">
+                            <li> <a href="index-2.html">Home</a></li>
+                            <li> <a href="category_page.html">Shop</a></li>
+                            <li> <a href="blog_page.html">Blog</a></li>
+                            <li><a href="about.html">About us</a></li>
+                          </ul>
+                        </div>
 					</nav>
+				</div>
+			</div>
+			<div class="header-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col sm-4 col-md-4 col-lg-3">
+							<div class="category">
+								<div class="menu-bar" data-target="#category-menu,#category-menu-responsive" data-toggle="collapse" aria-expanded="true" role="button">
+                                    <h4 class="category_text">Chuyên mục</h4>
+                                    <span class="i-bar"><i class="fa fa-bars"></i></span>
+                                </div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</header>
